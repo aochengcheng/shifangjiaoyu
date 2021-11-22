@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "author": {
     "name": "ac",
-    "email": "1156438031@qq.com",
+    "email": "1156438031@qq.com"
   },
   "keywords": [
     "react",
@@ -17,6 +17,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/togetherEnjoy/shifangjiaoyu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/togetherEnjoy/shifangjiaoyu/issues",
+    "email": "1156438031@qq.com"
   },
   "files": [
     "es",
