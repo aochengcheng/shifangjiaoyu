@@ -2,6 +2,10 @@
 
 ## Getting Started
 
+github token
+
+`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`
+
 Install dependencies,
 
 ```bash
