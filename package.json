@@ -2,6 +2,10 @@
   "private": false,
   "name": "shifangjiaoyu",
   "version": "1.0.1",
+  "author": {
+    "name": "ac",
+    "email": "1156438031@qq.com",
+  },
   "keywords": [
     "react",
     "shifangjiaoyu"
@@ -10,12 +14,15 @@
   "maintainers": [
     "1156438031@qq.com"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/togetherEnjoy/shifangjiaoyu.git"
+  },
   "files": [
     "es",
     "lib"
   ],
   "license": "MIT",
-
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
