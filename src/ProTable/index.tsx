@@ -3,6 +3,7 @@ import { Divider, Dropdown, Menu, Popconfirm, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import qs from 'query-string';
 import ProTable, { ProTableProps } from '@ant-design/pro-table';
+import { ParamsType } from '@ant-design/pro-provider';
 import type { FormInstance } from 'antd/lib/form';
 import type { TooltipProps } from 'antd/lib/tooltip';
 
@@ -29,11 +30,11 @@ interface ActionInterface {
 
 type Action = ActionInterface | React.ReactElement | undefined;
 
-interface TableProps extends ProTableProps<any, any> {
+type TableProps = {
   action?: (item: any, index: number) => Action[];
   actionWidth?: number;
   searchQuery?: boolean;
-}
+};
 
 const renderActionItem = (item: Action, index: number, row: any) => {
   if (!item) return undefined;
@@ -111,7 +112,7 @@ const renderActionItem = (item: Action, index: number, row: any) => {
   );
 };
 
-const Table = ({
+const Table = <T extends Record<string, any>, U extends ParamsType>({
   action,
   columns: customColumns,
   actionWidth,
@@ -121,7 +122,7 @@ const Table = ({
   searchQuery = true,
   request,
   ...props
-}: TableProps) => {
+}: TableProps & ProTableProps<T, U>) => {
   const queryParams = new URLSearchParams(window.location.search);
 
   const innerFormRef = React.useRef<FormInstance>();
