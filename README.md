@@ -4,7 +4,7 @@
 
 github token
 
-`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`
+`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`
 
 Install dependencies,
 
